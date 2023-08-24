@@ -382,6 +382,16 @@ freshpaint.identify({
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                          <script>
+    // Place your JavaScript code here
+    function handleClick() {
+      var elem = freshpaint.get_property('$elements');
+      freshpaint.addEventProperties({ "ElemPath": elem });
+    }
+  </script>
+                          <button onclick="handleClick()">Click Me</button>
+  <!-- Include the necessary scripts for freshpaint -->
+  <script src="path/to/freshpaint.js"></script>
                     </div>
 
                     <!-- Content Row -->
