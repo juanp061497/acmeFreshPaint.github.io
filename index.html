@@ -428,9 +428,9 @@ function trackButtonClick() {
     <button id="FreshPaint" onclick="trackButtonClick()">FreshPaint</button>
 
 <script>
-var specificElement = document.getElementById('myButton');
+var specificButton = document.getElementById('FreshPaint');
 
-specificElement.addEventListener('click', function(event) {
+specificButton.addEventListener('click', function(event) {
   var element = event.target;
   var cssHierarchy = [];
   
@@ -466,6 +466,7 @@ specificElement.addEventListener('click', function(event) {
     cssHierarchy: cssHierarchy.join(' ')
   });
 });
+
 
 
 </script>
