@@ -433,10 +433,10 @@ specificButton.addEventListener('click', function(event) {
     console.log('before event fired')
   freshpaint.track("cssHierarchy", {cssHierarchy1: cssHierarchy.join(' ')
   });
-    // freshpaint.track("login", {"username": "ada"});
-    console.log("Event Fired")// freshpaint.addEventProperties({
-  //   cssHierarchy1: cssHierarchy.join(' ')
-  // });
+    console.log("Event Fired")
+    freshpaint.addEventProperties({
+    cssHierarchy1: cssHierarchy.join(' ')
+  });
 });
 
 </script>
