@@ -430,10 +430,12 @@ specificButton.addEventListener('click', function(event) {
     
     element = element.parentNode;
   }
-  
-  freshpaint.addEventProperties({
+  freshpaint.track({
     cssHierarchy1: cssHierarchy.join(' ')
   });
+  // freshpaint.addEventProperties({
+  //   cssHierarchy1: cssHierarchy.join(' ')
+  // });
 });
 
 </script>
