@@ -392,40 +392,9 @@ function trackButtonClick() {
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                          <script>
-    // Place your JavaScript code here
-    function handleClick() {
-      var elem = freshpaint.get_property('$elements');
-      freshpaint.addEventProperties({ "ElemPath": elem });
-    }
-  </script>
-                          <button id='freshpaint' onclick="handleClick()">Click Me</button>
-  <!-- Include the necessary scripts for freshpaint -->
-  <script src="path/to/freshpaint.js"></script>
-                    </div>
-                      <button id="myButton">Click Me</button>
-
-  <script>
-    const button = document.querySelector('#myButton');
-
-    button.addEventListener('click', () => {
-      fetch('https://api.perfalytics.com/track')
-        .then(response => response.json())
-        .then(data => {
-          // Access the payload from the response
-          console.log(data.payload);
-        })
-        .catch(error => {
-          // Handle any errors that occurred during the request
-          console.error(error);
-        });
-    });
-  </script>
-
-                    </script>
-
+                          
 </head>
-    <button id="FreshPaint" onclick="trackButtonClick()">FreshPaint</button>
+    <button id="FreshPaint">FreshPaint</button>
 
 <script>
 var specificButton = document.getElementById('FreshPaint');
@@ -466,8 +435,6 @@ specificButton.addEventListener('click', function(event) {
     cssHierarchy1: cssHierarchy.join(' ')
   });
 });
-
-
 
 </script>
 
