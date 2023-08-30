@@ -428,10 +428,8 @@ function trackButtonClick() {
     <button id="FreshPaint" onclick="trackButtonClick()">FreshPaint</button>
 
 <script>
-function trackButtonClick(buttonId) {
-  var specificButton = document.getElementById(buttonId);
-
-  specificButton.addEventListener('click', function(event) {
+    function trackButtonClick(buttonElement) {
+  buttonElement.addEventListener('click', function(event) {
     var element = event.target;
     var cssHierarchy = [];
     
@@ -470,8 +468,12 @@ function trackButtonClick(buttonId) {
 }
 
 // Usage example
-trackButtonClick('FreshPaint');
-trackButtonClick('myButton');
+var button1 = document.getElementById('button1');
+trackButtonClick(myButton);
+
+var button2 = document.getElementById('button2');
+trackButtonClick(FreshPaint);
+
 
 // var specificButton = document.getElementById('FreshPaint');
 
