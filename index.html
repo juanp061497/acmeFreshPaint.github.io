@@ -33,6 +33,16 @@ freshpaint.identify({
 </script>
 
 </head>
+    <button id="myButton" onclick="trackButtonClick()">Click Me</button>
+
+<script>
+function trackButtonClick() {
+  freshpaint.addEventProperties({
+    "ab test variant": "a"
+  });
+}
+</script>
+
 
 <body id="page-top">
 
