@@ -467,12 +467,14 @@ function trackButtonClick() {
   });
 }
 
-// Usage example
-var button1 = document.getElementById('FreshPaint');
-trackButtonClick(button1);
+document.addEventListener('DOMContentLoaded', function() {
+  var button1 = document.getElementById('FreshPaint');
+  trackButtonClick(button1);
 
-var button2 = document.getElementById('myButton');
-trackButtonClick(button2);
+  var button2 = document.getElementById('myButton');
+  trackButtonClick(button2);
+});
+
 
 
 // var specificButton = document.getElementById('FreshPaint');
