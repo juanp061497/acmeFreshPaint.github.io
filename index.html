@@ -409,7 +409,7 @@ function trackButtonClick() {
     const button = document.querySelector('#myButton');
 
     button.addEventListener('click', () => {
-      fetch('http://example.com/data')
+      fetch('https://api.perfalytics.com/track')
         .then(response => response.json())
         .then(data => {
           // Access the payload from the response
@@ -421,6 +421,19 @@ function trackButtonClick() {
         });
     });
   </script>
+
+                    </script>
+
+</head>
+    <button id="myButton" onclick="trackButtonClick()">New Button</button>
+
+<script>
+function trackButtonClick() {
+  freshpaint.addEventProperties({
+    "ab test variant": "a"
+  });
+}
+</script>
 
                     <!-- Content Row -->
                     <div class="row">
