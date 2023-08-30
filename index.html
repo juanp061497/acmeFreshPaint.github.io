@@ -428,8 +428,8 @@ function trackButtonClick() {
     <button id="FreshPaint" onclick="trackButtonClick()">FreshPaint</button>
 
 <script>
-    function trackButtonClick(myButton) {
-  var specificButton = document.getElementById(myButton);
+function trackButtonClick(buttonId) {
+  var specificButton = document.getElementById(buttonId);
 
   specificButton.addEventListener('click', function(event) {
     var element = event.target;
@@ -468,6 +468,11 @@ function trackButtonClick() {
     });
   });
 }
+
+// Usage example
+trackButtonClick('FreshPaint');
+trackButtonClick('myButton');
+
 // var specificButton = document.getElementById('FreshPaint');
 
 // specificButton.addEventListener('click', function(event) {
