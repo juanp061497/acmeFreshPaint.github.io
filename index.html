@@ -389,10 +389,28 @@ freshpaint.identify({
       freshpaint.addEventProperties({ "ElemPath": elem });
     }
   </script>
-                          <button onclick="handleClick()">Click Me</button>
+                          <button id='freshpaint' onclick="handleClick()">Click Me</button>
   <!-- Include the necessary scripts for freshpaint -->
   <script src="path/to/freshpaint.js"></script>
                     </div>
+                      <button id="myButton">Click Me</button>
+
+  <script>
+    const button = document.querySelector('#myButton');
+
+    button.addEventListener('click', () => {
+      fetch('http://example.com/data')
+        .then(response => response.json())
+        .then(data => {
+          // Access the payload from the response
+          console.log(data.payload);
+        })
+        .catch(error => {
+          // Handle any errors that occurred during the request
+          console.error(error);
+        });
+    });
+  </script>
 
                     <!-- Content Row -->
                     <div class="row">
