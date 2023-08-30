@@ -428,12 +428,49 @@ function trackButtonClick() {
     <button id="myButton" onclick="trackButtonClick()">New Button</button>
 
 <script>
-function trackButtonClick() {
+var specificElement = document.getElementById('myButton');
+
+specificElement.addEventListener('click', function(event) {
+  var element = event.target;
+  var cssHierarchy = [];
+  
+  while (element) {
+    if (element.nodeType === Node.ELEMENT_NODE) {
+      var elementDescription = element.tagName.toLowerCase();
+    
+      if (element.id) {
+        elementDescription += '#' + element.id;
+      } else if (element.className) {
+        var classNames = element.className.split(' ');
+        var filteredClassNames = classNames.filter(function(className) {
+          return !className.startsWith('d-');
+        });
+        elementDescription += '.' + filteredClassNames.join('.');
+      }
+    
+      if (element.classList.contains('d-flex')) {
+        elementDescription += '.d-flex';
+      }
+      
+      if (element.classList.contains('flex-column')) {
+        elementDescription += '.flex-column';
+      }
+    
+      cssHierarchy.unshift(elementDescription);
+    }
+    
+    element = element.parentNode;
+  }
+  
   freshpaint.addEventProperties({
-    "ab test variant": "a"
+    cssHierarchy: cssHierarchy.join(' ')
   });
-}
+});
+
+
 </script>
+
+                    
 
                     <!-- Content Row -->
                     <div class="row">
