@@ -441,6 +441,35 @@ specificButton.addEventListener('click', function(event) {
 
 </script>
 
+                        <!-- Event snippet for Generate Report conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11106798288/vtL8CO-U6dIYENCVkbAp',
+      'transaction_id': '',
+      'event_callback': callback
+  });
+  return false;
+}
+
+// Add a button to the HTML page
+document.addEventListener("DOMContentLoaded", function() {
+  var button = document.createElement("button");
+  button.innerHTML = "Click Me";
+  button.addEventListener("click", function() {
+    gtag_report_conversion('https://example.com');
+  });
+  document.body.appendChild(button);
+});
+</script>
+
+
                     
 
                     <!-- Content Row -->
