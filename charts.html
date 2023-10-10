@@ -31,6 +31,20 @@ freshpaint.page();
 
 </head>
 
+    <script>
+(function() {
+  function trackAccountCreated() {
+    freshpaint.track("accountCreated", {
+      url: window.location.href
+    });
+  }
+
+  if (window.location.hash === "#createaccount") {
+    trackAccountCreated();
+  }
+})();
+</script>
+
 <body id="page-top">
 
     <!-- Page Wrapper -->
