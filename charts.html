@@ -45,14 +45,14 @@ freshpaint.page();
     freshpaint.track("accountCreated", {
       url: window.location.href
     });
-      freshpaint.identify({
- "email": "ada.lovelace@example.com",
- "name": "Ada Lovelace"
-});
   }
 
   if (window.location.hash === "#createaccount") {
     trackAccountCreated();
+      freshpaint.identify({
+ "email": "ada.lovelace@example.com",
+ "name": "Ada Lovelace"
+});
   }
     console.log("fired createaccount event")
 })();
