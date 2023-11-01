@@ -56,6 +56,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WC2LRBT2');</script>
 <!-- End Google Tag Manager -->
+<script>
+    // Identify the user before tracking the event
+    freshpaint.identify("user123", {
+      "email": "john.doe@example.com",
+      "name": "John Doe"
+    });
+
+    // Track the event with the user information
+    freshpaint.track("Purchase", {
+      "product": "ABC123",
+      "price": 99.99
+    });
+</script>
 
 </head>
     <button id="myButton" onclick="trackButtonClick()">New Button</button>
