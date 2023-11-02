@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,6 +39,30 @@ freshpaint.page();
   gtag('config', 'G-H0HX52LFMM');
 </script>
 </head>
+
+    <script>
+
+freshpaint.identify("ada.lovelace@example.com", {
+  "email": "ada.lovelace@example.com",
+  "name": "Ada Lovelace"
+});
+
+// Add properties to the event
+freshpaint.addEventProperties({
+  "email": "ada.lovelace@example.com",
+  "name": "ada"
+});
+
+freshpaint.addInitialEventProperties({"email2": "juan@test.com"});
+
+// Track the event with the user information and added properties
+freshpaint.track("FBTest1", {
+  "value": 12344,
+  "currency": 99.99,
+  "email1": "ada.lovelace@example.com"
+});
+
+</script>
 
     <script>
 (function() {
