@@ -86,23 +86,28 @@ freshpaint.track("FBTest1", {
 
     
  -->
- <script> 
+    <script>
 var eml = freshpaint.cookie.props.email;
-var fname = freshpaint.cookie.props.Fname;
-
 
 // Track the event with the user information and added properties
 freshpaint.track("FBTest1", {
   "value": 12344,
   "currency": 99.99,
-  "email1": eml,
-  "fname": fname
-
+  "email1": eml
 });
 
-return eml;
+if (!!freshpaint.cookie.props.$fbclid) {
+  var fbcl = freshpaint.cookie.props.$fbclid;
+  return fbcl;
+}
 
-</script>
+if (!!freshpaint.cookie.props.$gclid) {
+  var gcl = freshpaint.cookie.props.$gclid;
+  return gcl;
+}
+
+return eml;
+    </scipt> 
 
 
     
