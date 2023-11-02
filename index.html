@@ -58,8 +58,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <script>
     
-freshpaint.identify("ada.lovelace@example.com");
-
+freshpaint.identify("ada.lovelace@example.com", {
+ "email": "ada.lovelace@example.com",
+ "name": "Ada Lovelace"
+});
     // Add properties to the event
     freshpaint.addEventProperties({
       "email": "ada.lovelace@example.com",
