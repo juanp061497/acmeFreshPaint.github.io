@@ -56,8 +56,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WC2LRBT2');</script>
 <!-- End Google Tag Manager -->
-<script>
 
+<!--     <script>
 freshpaint.identify("ada.lovelace@example.com", {
   "email": "ada.lovelace@example.com",
   "name": "Ada Lovelace"
@@ -82,7 +82,7 @@ freshpaint.track("FBTest1", {
   "email1": eml
 });
 
-</script>
+</script> -->
 
 <!--     
     <script>
@@ -107,6 +107,30 @@ if (!!freshpaint.cookie.props.$gclid) {
 
 return eml;
     </scipt>  -->
+<script>
+
+    var eml = freshpaint.cookie.props.email;
+
+// Track the event with the user information and added properties
+freshpaint.track("FBTest1", {
+  "value": 12344,
+  "currency": 99.99,
+  "email1": eml
+});
+
+if (!!freshpaint.cookie.props.$fbclid) {
+  var fbcl = freshpaint.cookie.props.$fbclid;
+  return fbcl;
+}
+
+if (!!freshpaint.cookie.props.$gclid) {
+  var gcl = freshpaint.cookie.props.$gclid;
+  return gcl;
+}
+
+return eml;
+</script> 
+
 
 
 <body id="page-top">
